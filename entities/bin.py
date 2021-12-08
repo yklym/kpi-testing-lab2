@@ -5,16 +5,16 @@ from .base import Node
 class Bin(Node):
     type = NODE_TYPES.BIN
 
-    def __init__(self, name, content = '') -> None:
+    def __init__(self, name, content='') -> None:
+        self._content = content
         super().__init__(name)
-        self.content = content
 
     @property
     def content(self):
         # return buffer content
-        return self.content
+        return self._content
 
     @content.setter
-    def content(self):
+    def content(self, _):
         # check so content is not changed
-        return self.content
+        return self._content

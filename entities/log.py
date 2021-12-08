@@ -7,17 +7,19 @@ class Log(Node):
     _content = []
 
     def __init__(self, name) -> None:
+        self._content = []
+
         super().__init__(name)
 
     @property
     def content(self):
         # return log content
-        return '\n'.join(self.content)
+        return '\n'.join(self._content)
 
     @content.setter
     def content(self):
         # check so content is not changed
-        return self.content
+        return self._content
 
     def add_line(self, line):
         self._content.append(line)

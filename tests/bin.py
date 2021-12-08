@@ -26,4 +26,5 @@ class TestBin:
         # check if can't update
 
         node.content = 'some bullshit'
-        assert node.content != test_content
+        # content didn't change
+        assert node.content == test_content
