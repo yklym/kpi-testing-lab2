@@ -4,10 +4,10 @@ from .base import Node
 
 class Bin(Node):
     type = NODE_TYPES.BIN
-    content = ''
 
-    def __init__(self, name) -> None:
+    def __init__(self, name, content = '') -> None:
         super().__init__(name)
+        self.content = content
 
     @property
     def content(self):
